@@ -1,0 +1,178 @@
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #74d56e;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 20px;
+    max-width: 1200px;
+    width: 90%;
+    margin: 20px auto;
+}
+
+/* Header Section */
+.header-section {
+    grid-column: 1 / span 2;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+}
+
+.header-section img {
+    width: 200px;
+    height: auto;
+}
+
+/* Main Content Area */
+.main-content {
+    grid-column: 1 / 2;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    grid-template-rows: auto auto;
+}
+
+.news-image {
+    background-color: #d3eafc;
+    height: 400px;
+    border-radius: 10px;
+}
+
+.breaking-news {
+    grid-column: span 2;
+    background-color: #ff4d4f;
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    padding: 20px;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.breaking-news:before {
+    content: 'BREAKING NEWS';
+    font-size: 30px;
+    font-weight: bold;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Right Section */
+.right-section {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.candidate-box {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    height: 120px;
+}
+
+.candidate-box img {
+    width: 80px;
+    height: auto;
+}
+
+.candidate-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 18px;
+}
+
+/* Bottom Section */
+.bottom-section {
+    grid-column: 1 / span 2;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    align-items: stretch;
+    /* Ensure boxes are the same height */
+}
+
+.bottom-section .madha-image {
+    width: 140px;
+    height: auto;
+    align-self: center;
+    /* Center the image vertically */
+}
+
+.bottom-section .candidate-box {
+    flex: 1;
+    /* Ensure boxes expand equally */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.bottom-section .candidate-box img {
+    width: 80px;
+    height: auto;
+}
+
+.bottom-section .candidate-box .votes {
+    font-weight: bold;
+    font-size: 20px;
+    color: #000;
+}
+
+.votes,
+h2 {
+    transition: opacity 0.5s ease;
+}
+
+.votes-updating,
+h2-updating {
+    opacity: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        grid-template-columns: 1fr;
+    }
+
+    .right-section {
+        grid-column: 1 / 2;
+    }
+
+    .bottom-section {
+        flex-direction: column;
+    }
+
+    .news-image {
+        height: 250px;
+    }
+
+    .candidate-box {
+        height: auto;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .candidate-box img {
+        margin-bottom: 10px;
+    }
+}
