@@ -25,7 +25,7 @@ Update the database connection details in update_votes.php to match your databas
 
 Run the Application:
 Place the project folder in your web server's root directory.
-Access the application via http://localhost/real-time-election-vote-update-system. 
+Access the application via  http://localhost/voting%20system/
 
 Usage
 Admin Interface: Navigate to admin.php to update candidate votes.
